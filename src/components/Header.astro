@@ -1,0 +1,68 @@
+---
+
+---
+
+<header id="header">
+  <h1>PedroCirotto</h1>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://github.com/cirottodsx">
+          <img src="../../public/imgs/iconmonstr-github-3-240.png" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/pedro-henrique-cirotto-81b89028a/"
+          ><img
+            src="../../public/imgs/iconmonstr-linkedin-3-240.png"
+            alt=""
+          /></a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  img {
+    height: 30px;
+  }
+
+  header {
+    background: linear-gradient(to left, #8942a8b7, #ba382fce);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    max-width: 100vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    transition: 1s;
+    z-index: 999;
+  }
+
+  header.rolagem {
+    background-color: #000;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  img {
+    filter: brightness(0) invert(1);
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  window.addEventListener("scroll", () => {
+    let header = document.querySelector("#header");
+    header.classList.toggle("rolagem", window.scrollY > 10);
+  });
+</script>

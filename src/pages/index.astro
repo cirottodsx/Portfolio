@@ -1,0 +1,87 @@
+---
+import Experiencia from "../components/Experiencia.astro";
+import Tecnologies from "../components/Tecnologies.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Portfolio">
+  <main>
+    <div class="center-container">
+      <section class="sec texts">
+        <h1 class="line">
+          I'am <code>Front-end</code> developer
+        </h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          neque maiores facere qui in nostrum nihil eaque autem omnis esse?
+        </p>
+      </section>
+
+      <section class="sec texts">
+        <h1 class="underline">Sobre mim</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed
+          distinctio totam provident dolor ad enim ratione sit quis, nisi
+          molestiae. Commodi eaque repellendus nobis! Excepturi perferendis at
+          tenetur magni.
+        </p>
+      </section>
+    </div>
+    <Tecnologies />
+    <Experiencia />
+  </main>
+</Layout>
+
+<style>
+  .center-container {
+    height: 85vh;
+    margin-top: 60px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .sec {
+    width: 100%;
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+  }
+
+  code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px;
+    border-radius: 10px;
+  }
+
+  .line {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    animation:
+      blinkCursor 1000ms infinite normal,
+      typing 4s 1s normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.9);
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 22rem;
+    }
+  }
+
+  @keyframes blinkCursor {
+    to {
+      border-right-color: transparent;
+    }
+  }
+</style>
